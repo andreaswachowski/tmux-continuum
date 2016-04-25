@@ -59,8 +59,13 @@ main() {
 	start_iterm_and_run_tmux
 	if [ "$TRUE_FULL_SCREEN" == "fullscreen" ]; then
 		resize_to_true_full_screen
-	else
-		resize_window_to_full_screen
+	# Do nothing. I like the iTerm size I configured, 
+	# and this does not work with a dual monitor setup
+	# TODO: Follow up and implement properly by using
+	# hmscreen and initializing a position
+	# http://stackoverflow.com/questions/5865989/positioning-a-window-with-applescript-using-dual-monitors
+	#else
+	#	resize_window_to_full_screen
 	fi
 }
 main
